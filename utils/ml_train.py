@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
@@ -10,17 +8,11 @@ import re
 import glob
 import copy
 import pickle
+import collections
 from datetime import datetime
 dateparse = lambda x: datetime.strptime(x, '%Y-%m-%d %H:%M:%S')
 
-from matplotlib.cm import viridis
-from matplotlib.ticker import MaxNLocator
-
-from pycm import ConfusionMatrix
-
-import sys
-
-import collections
+from concurrent.futures import ProcessPoolExecutor
 
 from sklearn.datasets import make_classification
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -37,19 +29,6 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.neighbors import KNeighborsClassifier
-
-from concurrent.futures import ProcessPoolExecutor
-
-from rdkit.Chem import MolFromSmiles
-
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.neural_network import MLPClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
-from sklearn.naive_bayes import GaussianNB
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
 from sklearn.calibration import CalibratedClassifierCV
 
 

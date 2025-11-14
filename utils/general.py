@@ -10,37 +10,10 @@ import re
 import glob
 import copy
 import pickle
+import collections
 from datetime import datetime
 dateparse = lambda x: datetime.strptime(x, '%Y-%m-%d %H:%M:%S')
 
-from matplotlib.cm import viridis
-from matplotlib.ticker import MaxNLocator
-
-from pycm import ConfusionMatrix
-
-import sys
-
-import collections
-
-from sklearn.datasets import make_classification
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from sklearn.metrics import confusion_matrix, roc_curve, auc, roc_auc_score, f1_score, r2_score, \
-                            accuracy_score, cohen_kappa_score, balanced_accuracy_score, \
-                            precision_score, recall_score, precision_recall_curve
-
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neural_network import MLPClassifier
-from sklearn.preprocessing import StandardScaler
-from sklearn.gaussian_process.kernels import RBF
-from sklearn.neighbors import KNeighborsClassifier
-
-from concurrent.futures import ProcessPoolExecutor
-
-from rdkit.Chem import MolFromSmiles
 
 def get_reactivity_class(true_yield, b1, _LABELS):
     if true_yield >= b1:

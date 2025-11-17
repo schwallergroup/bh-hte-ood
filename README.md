@@ -36,7 +36,7 @@ pip install "scikit-learn==1.1.2" numpy pandas scipy tqdm matplotlib
 ### 1. Unified BH HTE dataset
 
 **File:** `data/BH_HTE_Curated_Dataset_v2025-11.csv`  
-**Pickle Version::** `Has additional columns, due to size it will be uploaded in a different distribution platform.`  
+**Pickle Version::** `Has additional columns, due to size it is hosted at https://zenodo.org/records/17634928`  
 
 The .csv used as `pandas.DataFrame` contains:
 

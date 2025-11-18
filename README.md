@@ -3,7 +3,7 @@ Code & Curated Dataset
 
 This repository contains the code and curated data accompanying:
 
-> **Neves et al., “Robust Out-of-Distribution Prediction of Buchwald–Hartwig Reactions” (2025), ChemRxiv, DOI: 10.26434/chemrxiv-2025-xcr46**
+> **Neves, P.; Hao, B.; Aikonen, S. et al. “Robust Out-of-Distribution Prediction of Buchwald–Hartwig Reactions” (2025), ChemRxiv, DOI: 10.26434/chemrxiv-2025-xcr46**
 
 It provides:
 

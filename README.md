@@ -31,6 +31,8 @@ conda activate bh_ood
 pip install "scikit-learn==1.1.2" numpy pandas scipy tqdm matplotlib
 ```
 
+Installation typically takes under 5 minutes via pip, and the single demo benchmark runs in approximately 10 minutes on a standard desktop computer.
+
 ## Data
 
 ### 1. Unified BH HTE dataset

@@ -31,6 +31,8 @@ from sklearn.gaussian_process.kernels import RBF
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.calibration import CalibratedClassifierCV
 
+from utils.performance import calculate_metrics
+
 
 def train_models(df, model_names = ["rf_model", "xgb_model", "lr_model"], feats_col = "DRFP+QM"):
     models = {}
@@ -137,11 +139,6 @@ def train_test_ood_cluster_static(df_HTE_BH, model_names, metrics_names, rand_st
 
         df_train = df_train.sample(frac=sample_train, random_state=0)
         
-        #ensure aryls and amines combinations in test are novel to the model        
-        #df_test = df_test[~df_test['Aryl_Amine'].isin(list(df_train["Aryl_Amine"].unique()))]
-        df_test = df_test[~df_test['Aryl SMILES'].isin(list(df_train["Aryl SMILES"].unique()))]
-        print(f"Test Size is: {len(df_test)}.")
-
         models, scaler = train_models(df_train, model_names, features)
         metrics, conf_bucket_metrics = calculate_metrics(models, scaler, df_test, features)
 

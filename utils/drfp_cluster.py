@@ -1,5 +1,5 @@
 from rdkit import Chem
-from rdkit.Chem import AllChem
+from rdkit.Chem import rdFingerprintGenerator
 import numpy as np
 from sklearn.cluster import KMeans
 
@@ -33,7 +33,8 @@ def get_morgan_fingerprint(smiles, radius=3, nBits=2048):
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:
         raise ValueError(f"Invalid SMILES string: {smiles}")
-    return AllChem.GetMorganFingerprintAsBitVect(mol, radius, nBits=nBits)
+    generator = rdFingerprintGenerator.GetMorganGenerator(radius=radius, fpSize=nBits)
+    return generator.GetFingerprint(mol)
 
 def compute_drfp(reaction_smiles, radius=3, nBits=2048):
     """

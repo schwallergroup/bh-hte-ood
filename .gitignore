@@ -4,3 +4,4 @@ visuals/
 model/
 Manuscript Visuals.ipynb
 __pycache__/
+*.pkl

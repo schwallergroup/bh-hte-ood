@@ -12,8 +12,8 @@ A unified, curated Buchwald–Hartwig (BH) high-throughput experimentation (HTE)
 - Approximately **16,200 reactions** curated from published open-source HTE datasets
 - Standardized names and SMILES representations for chemical entities across all data sources
 
-**File:** `data/BH_HTE_Curated_Dataset_v20260219.csv`  
-**Pickle Version::** `Has additional columns, due to size it is hosted at **[Collection of Curated Buchwald–Hartwig HTE Reactions](https://doi.org/10.5281/zenodo.19636649)**
+**File:** data/BH_HTE_Curated_Dataset_v20260219.csv, contains all reactions and outcomes.
+**Pickle Version:** Has additional columns (eg data splits), due to size it is hosted at **[Collection of Curated Buchwald–Hartwig HTE Reactions](https://doi.org/10.5281/zenodo.19636649)**
 
 ## Repository contents
 

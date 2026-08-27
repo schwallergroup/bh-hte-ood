@@ -1,17 +1,29 @@
 # Robust Out-of-Distribution Prediction of Buchwald–Hartwig Reactions
-Code & Curated Dataset
 
-This repository contains the code and curated data accompanying:
+This repository contains the code and curated data accompanying the published study:
 
-> **Neves, P.; Hao, B.; Aikonen, S. et al. “Robust Out-of-Distribution Prediction of Buchwald–Hartwig Reactions” (2025), ChemRxiv, DOI: 10.26434/chemrxiv-2025-xcr46**
+> **Neves, P. et al. “Robust out-of-distribution prediction of Buchwald–Hartwig reactions.” *Nature Computational Science* (2026). [https://doi.org/10.1038/s43588-026-01017-6](https://doi.org/10.1038/s43588-026-01017-6)**
 
-It provides:
+## Dataset
 
-- A unified, curated Buchwald–Hartwig (BH) high-throughput experimentation (HTE) dataset (JnJ dedicated production + open-source)
-- Notebooks to reproduce results:
-  - Out-of-distribution (OOD) benchmarking across data sources
-  - The Compound–Reaction Diversity Score (CRDS) vs OOD performance
-  - The impact produced JnJ HTE dataset when added to existing data on model performance
+A unified, curated Buchwald–Hartwig (BH) high-throughput experimentation (HTE) dataset of approximately **27,500 Pd Catalyzed C-N coupling reactions**, comprising:
+
+- Approximately **11,300 high-quality reactions** generated through a dedicated Johnson & Johnson high-throughput experimentation campaign
+- Approximately **16,200 reactions** curated from published open-source HTE datasets
+- Standardized names and SMILES representations for chemical entities across all data sources
+
+**File:** `data/BH_HTE_Curated_Dataset_v20260219.csv`  
+**Pickle Version::** `Has additional columns, due to size it is hosted at **[Collection of Curated Buchwald–Hartwig HTE Reactions](https://doi.org/10.5281/zenodo.19636649)**
+
+## Repository contents
+
+The repository includes notebooks and supporting files for:
+
+- Out-of-distribution (OOD) benchmarking across data sources
+- Calculating the **Compound–Reaction Diversity Score (CRDS)** and correlation with OOD performance
+- Quantifying the impact of produced JnJ HTE dataset when combined with existing open-source data
+- Training a production model
+- Reagent Recommender Example
 
 ---
 
@@ -37,10 +49,7 @@ Installation typically takes under 5 minutes via pip, and the single demo benchm
 
 ### 1. Unified BH HTE dataset
 
-**File:** `data/BH_HTE_Curated_Dataset_v2025-11.csv`  
-**Pickle Version::** `Has additional columns, due to size it is hosted at https://zenodo.org/records/17634928`  
-
-The .csv used as `pandas.DataFrame` contains:
+**File:** `data/BH_HTE_Curated_Dataset_v20260219.csv` contains:
 
 - **Reaction identity**
   - Aryl and amine SMILES (e.g. `Aryl SMILES`, `Amine SMILES`)
